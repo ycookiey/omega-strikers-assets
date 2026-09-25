@@ -1,43 +1,86 @@
 # omega-strikers-assets
 
-Odyssey Interactive の公式 [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) をもとに、Omega Strikers のキャラクター close-up ポートレートを **WebP に変換 + kebab-case でリネーム**して並べた、ファンコミュニティ向けの静的アセットセット。
+Odyssey Interactive の公式 [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) をもとに、Omega Strikers のキャラクター close-up ポートレート 21 枚を **WebP に変換 + kebab-case にリネーム**して並べた、ファンコミュニティ向けの静的アセットセット。
+
+> 本リポジトリは **Odyssey Interactive とは非関連の非公式ファン配布物** です。詳しくは [LICENSE-IMAGES](./LICENSE-IMAGES) を参照。
 
 ## 使い方
 
-### 直接参照(CDN 配信)
+### CDN 経由(推奨)
 
-[jsDelivr](https://www.jsdelivr.com/) の GitHub 配信を使うと、CDN 経由でキャッシュされた画像がそのまま参照できる:
+[jsDelivr](https://www.jsdelivr.com/) の GitHub 配信を使うと、CDN 経由でキャッシュされた画像がそのまま参照できる。**安定運用ではリリース tag に pin する**のを推奨:
 
+```html
+<img
+  src="https://cdn.jsdelivr.net/gh/ycookiey/omega-strikers-assets@v1.0.0/characters/juliette.webp"
+  alt="Juliette"
+  width="320"
+  loading="lazy"
+/>
 ```
-https://cdn.jsdelivr.net/gh/ycookiey/omega-strikers-assets@main/characters/juliette.webp
-```
 
-タグ・commit SHA でピンも可能:
+TypeScript / JavaScript から manifest を fetch して 21 キャラ全部を扱う:
 
-```
-https://cdn.jsdelivr.net/gh/ycookiey/omega-strikers-assets@<sha>/characters/juliette.webp
-```
+```ts
+type Character = {
+  id: string
+  displayName: string
+  displayNameJa: string
+  image: string
+}
+type Manifest = { version: number; characters: Character[] }
 
-### プログラムから参照
+const CDN = "https://cdn.jsdelivr.net/gh/ycookiey/omega-strikers-assets@v1.0.0"
 
-`manifest.json` に全キャラクターの一覧が入っている:
+const manifest: Manifest = await fetch(`${CDN}/manifest.json`).then((r) =>
+  r.json()
+)
 
-```json
-{
-  "characters": [
-    { "id": "juliette", "displayName": "Juliette", "displayNameJa": "ジュリエット", "image": "characters/juliette.webp" }
-  ]
+for (const c of manifest.characters) {
+  console.log(c.displayNameJa, `${CDN}/${c.image}`)
 }
 ```
+
+### CDN pin の粒度
+
+| pin | 挙動 | 想定用途 |
+|---|---|---|
+| `@main` | 最新 main 追従。破壊的変更に晒される | preview / dev only |
+| `@v1` | v1.x.x の最新 minor に追従、breaking なし | 追加自動反映を望む consumer |
+| `@v1.0.0` | 完全固定 | production・再現性重視 |
 
 ## 収録キャラクター(21)
 
 Ai.Mi / Asher / Atlas / Drek'ar / Dubu / Era / Estelle / Finii / Juliette / Juno / Kai / Kazan / Luna / Mako / Nao / Octavia / Rasmus / Rune / Vyce / X / Zentaro
 
+全キャラの ID・英語名・日本語名・image path は [`manifest.json`](./manifest.json) を参照。
+
+## リポジトリ構成
+
+```
+omega-strikers-assets/
+├── LICENSE           # code / documentation の MIT
+├── LICENSE-IMAGES    # 画像素材の帰属と非関連 disclaimer
+├── README.md
+├── manifest.json     # id / displayName / displayNameJa / image path 一覧
+├── .gitattributes
+└── characters/
+    ├── ai-mi.webp
+    ├── asher.webp
+    ├── ...           # 全 21 ファイル
+```
+
 ## 帰属と権利
 
-Omega Strikers およびキャラクターアートワークは Odyssey Interactive の著作物。本リポジトリの画像は、Odyssey Interactive が公式に配布している [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) の "Character Art - Transparent Backgrounds" に含まれる素材を、WebP に変換してキャラ ID を kebab-case に揃えた上で再配置したもの。
+**画像素材** (`characters/*.webp`): Omega Strikers およびキャラクターアートワークは Odyssey Interactive の著作物。本リポジトリは公式 [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) の "Character Art - Transparent Backgrounds" 素材を、WebP に変換して kebab-case slug に揃えたうえで再配置した mirror。詳細および削除依頼窓口は [LICENSE-IMAGES](./LICENSE-IMAGES)。
 
-- 画像の著作権は Odyssey Interactive に帰属する
-- 本リポジトリは非商用のファンコミュニティ用途を前提とする
-- 配布元 Asset Kit の指定条件があれば、そちらが優先される
+**コード / ドキュメント**(`manifest.json` / `README.md` / `.gitattributes` 等): [MIT License](./LICENSE)。
+
+**非関連宣言**: 本リポジトリは Odyssey Interactive とは非関連の非公式ファン配布物であり、非商用ファンコミュニティ用途 (大会運営 tool、fan wiki 等) を前提とする。
+
+## 更新方針
+
+- **新キャラ追加**: minor bump (`v1.x.0`)
+- **既存 file の差し替え・rename / 削除**: major bump (`vX.0.0`)
+- **旧 tag は残す** (rewrite しない)。安定 pin は `@v1.0.0` を推奨、`@main` は preview 用途に留めるのが安全
+- Odyssey Interactive 側で公式 Asset Kit の差し替えがあった場合はそちらに追従する

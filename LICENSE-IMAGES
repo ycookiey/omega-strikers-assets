@@ -1,0 +1,33 @@
+Character portrait images (characters/*.webp)
+=============================================
+
+The WebP files in the characters/ directory are sourced from the Omega
+Strikers Game Asset Kit distributed by Odyssey Interactive:
+
+    https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY
+
+All character artwork, character names, and the Omega Strikers brand
+remain (C) Odyssey Interactive. This repository re-hosts the assets
+purely for non-commercial fan community use (community tournament
+tools, wikis, fan sites, etc.) and claims no ownership over the
+underlying artwork.
+
+This repository is NOT affiliated with, endorsed by, or sponsored by
+Odyssey Interactive.
+
+Removal requests
+----------------
+
+If Odyssey Interactive representatives, or any other rights holders,
+wish these assets removed or modified, please open a GitHub Issue on
+
+    https://github.com/ycookiey/omega-strikers-assets/issues
+
+or contact the repository owner directly. Requests will be honored.
+
+Scope
+-----
+
+This notice applies only to the WebP files under characters/. Repository
+code and documentation (manifest.json, README.md, .gitattributes, etc.)
+are licensed under the MIT License; see the LICENSE file.
