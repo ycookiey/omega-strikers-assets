@@ -1,6 +1,8 @@
 # omega-strikers-assets
 
-Odyssey Interactive の公式 [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) をもとに、Omega Strikers のキャラクター close-up ポートレート 21 枚を **WebP に変換 + kebab-case にリネーム**して並べた、ファンコミュニティ向けの静的アセットセット。
+Omega Strikers の 21 キャラの close-up ポートレートを、jsDelivr から配れる WebP に整えて置いた mirror。CDN pin で参照するだけ。
+
+素材は Odyssey Interactive の公式 [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) の "Character Art - Transparent Backgrounds"。手を入れたのは WebP 変換と kebab-case への rename のみ。
 
 > 本リポジトリは **Odyssey Interactive とは非関連の非公式ファン配布物** です。詳しくは [LICENSE-IMAGES](./LICENSE-IMAGES) を参照。
 
@@ -72,7 +74,7 @@ omega-strikers-assets/
 
 ## 帰属と権利
 
-**画像素材** (`characters/*.webp`): Omega Strikers およびキャラクターアートワークは Odyssey Interactive の著作物。本リポジトリは公式 [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) の "Character Art - Transparent Backgrounds" 素材を、WebP に変換して kebab-case slug に揃えたうえで再配置した mirror。詳細および削除依頼窓口は [LICENSE-IMAGES](./LICENSE-IMAGES)。
+**画像素材** (`characters/*.webp`): 著作権は Odyssey Interactive。本リポジトリは公式 [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) の "Character Art - Transparent Backgrounds" を WebP + kebab-case に整えた mirror。削除依頼窓口は [LICENSE-IMAGES](./LICENSE-IMAGES)。
 
 **コード / ドキュメント**(`manifest.json` / `README.md` / `.gitattributes` 等): [MIT License](./LICENSE)。
 
@@ -82,5 +84,6 @@ omega-strikers-assets/
 
 - **新キャラ追加**: minor bump (`v1.x.0`)
 - **既存 file の差し替え・rename / 削除**: major bump (`vX.0.0`)
-- **旧 tag は残す** (rewrite しない)。安定 pin は `@v1.0.0` を推奨、`@main` は preview 用途に留めるのが安全
-- Odyssey Interactive 側で公式 Asset Kit の差し替えがあった場合はそちらに追従する
+- **旧 tag は残す**(rewrite しない)
+- 公式 Asset Kit 側で差し替えがあれば追従する
+- 安定 pin は `@v1.0.0` を推奨、`@main` は preview 用途に限る
