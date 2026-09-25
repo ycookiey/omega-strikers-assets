@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": 1,
+  "source": {
+    "provider": "Odyssey Interactive",
+    "assetKit": "https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY",
+    "note": "Character close-up portraits sourced from the official Omega Strikers Game Asset Kit, converted to WebP for delivery."
+  },
+  "characters": [
+    { "id": "ai-mi",    "displayName": "Ai.Mi",   "displayNameJa": "アイ・ミー",  "image": "characters/ai-mi.webp" },
+    { "id": "asher",    "displayName": "Asher",   "displayNameJa": "アッシャー",  "image": "characters/asher.webp" },
+    { "id": "atlas",    "displayName": "Atlas",   "displayNameJa": "アトラス",    "image": "characters/atlas.webp" },
+    { "id": "drek-ar",  "displayName": "Drek'ar", "displayNameJa": "ドレッカー",  "image": "characters/drek-ar.webp" },
+    { "id": "dubu",     "displayName": "Dubu",    "displayNameJa": "ドゥブ",      "image": "characters/dubu.webp" },
+    { "id": "era",      "displayName": "Era",     "displayNameJa": "エラ",        "image": "characters/era.webp" },
+    { "id": "estelle",  "displayName": "Estelle", "displayNameJa": "エステル",    "image": "characters/estelle.webp" },
+    { "id": "finii",    "displayName": "Finii",   "displayNameJa": "フィニー",    "image": "characters/finii.webp" },
+    { "id": "juliette", "displayName": "Juliette","displayNameJa": "ジュリエット","image": "characters/juliette.webp" },
+    { "id": "juno",     "displayName": "Juno",    "displayNameJa": "ジュノ",      "image": "characters/juno.webp" },
+    { "id": "kai",      "displayName": "Kai",     "displayNameJa": "カイ",        "image": "characters/kai.webp" },
+    { "id": "kazan",    "displayName": "Kazan",   "displayNameJa": "カザン",      "image": "characters/kazan.webp" },
+    { "id": "luna",     "displayName": "Luna",    "displayNameJa": "ルナ",        "image": "characters/luna.webp" },
+    { "id": "mako",     "displayName": "Mako",    "displayNameJa": "マコ",        "image": "characters/mako.webp" },
+    { "id": "nao",      "displayName": "Nao",     "displayNameJa": "ナオ",        "image": "characters/nao.webp" },
+    { "id": "octavia",  "displayName": "Octavia", "displayNameJa": "オクタビア",  "image": "characters/octavia.webp" },
+    { "id": "rasmus",   "displayName": "Rasmus",  "displayNameJa": "ラスマス",    "image": "characters/rasmus.webp" },
+    { "id": "rune",     "displayName": "Rune",    "displayNameJa": "ルーン",      "image": "characters/rune.webp" },
+    { "id": "vyce",     "displayName": "Vyce",    "displayNameJa": "バイス",      "image": "characters/vyce.webp" },
+    { "id": "x",        "displayName": "X",       "displayNameJa": "X",           "image": "characters/x.webp" },
+    { "id": "zentaro",  "displayName": "Zentaro", "displayNameJa": "ゼンタロウ",  "image": "characters/zentaro.webp" }
+  ]
+}
