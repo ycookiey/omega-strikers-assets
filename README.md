@@ -2,7 +2,7 @@
 
 Omega Strikers 21 キャラのアイコン画像を、jsDelivr から配れる WebP に整えて置いた。CDN pin で参照するだけ。
 
-素材は Odyssey Interactive の公式 [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) の "Character Art - Transparent Backgrounds"。**Odyssey Interactive とは非関連の非公式ファン配布物**。詳細と削除依頼窓口は [LICENSE-IMAGES](./LICENSE-IMAGES)。
+素材は Odyssey Interactive の公式 [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) から。**Odyssey Interactive とは非関連の非公式ファン配布物**。詳細と削除依頼窓口は [LICENSE-IMAGES](./LICENSE-IMAGES)。
 
 ## 使い方
 
@@ -27,9 +27,9 @@ const { characters } = await fetch(`${CDN}/manifest.json`).then((r) => r.json())
 
 | pin | 用途 |
 |---|---|
-| `@v1.0.0` | production・再現性重視 |
-| `@v1` | v1.x.x に追従、breaking なし |
-| `@main` | preview / dev only |
+| `@v1.0.0` | 本番・再現性重視 |
+| `@v1` | v1.x.x に追従、破壊的変更なし |
+| `@main` | 動作確認・開発用 |
 
 ## License
 
