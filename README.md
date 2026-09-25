@@ -1,6 +1,6 @@
 # omega-strikers-assets
 
-Omega Strikers の 21 キャラの close-up ポートレートを、jsDelivr から配れる WebP に整えて置いた mirror。CDN pin で参照するだけ。
+Omega Strikers 21 キャラのアイコン画像を、jsDelivr から配れる WebP に整えて置いた。CDN pin で参照するだけ。
 
 素材は Odyssey Interactive の公式 [Game Asset Kit](https://drive.google.com/drive/folders/1XzdEqmnba4m-TrA0F67JlDkyiZdRX2hY) の "Character Art - Transparent Backgrounds"。**Odyssey Interactive とは非関連の非公式ファン配布物**。詳細と削除依頼窓口は [LICENSE-IMAGES](./LICENSE-IMAGES)。
 
