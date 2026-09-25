@@ -77,11 +77,3 @@ omega-strikers-assets/
 **コード / ドキュメント**(`manifest.json` / `README.md` / `.gitattributes` 等): [MIT License](./LICENSE)。
 
 **非関連宣言**: 本リポジトリは Odyssey Interactive とは非関連の非公式ファン配布物であり、非商用ファンコミュニティ用途 (大会運営 tool、fan wiki 等) を前提とする。
-
-## 更新方針
-
-- **新キャラ追加**: minor bump (`v1.x.0`)
-- **既存 file の差し替え・rename / 削除**: major bump (`vX.0.0`)
-- **旧 tag は残す**(rewrite しない)
-- 公式 Asset Kit 側で差し替えがあれば追従する
-- 安定 pin は `@v1.0.0` を推奨、`@main` は preview 用途に限る
