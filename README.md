@@ -51,11 +51,9 @@ for (const c of manifest.characters) {
 | `@v1` | v1.x.x の最新 minor に追従、breaking なし | 追加自動反映を望む consumer |
 | `@v1.0.0` | 完全固定 | production・再現性重視 |
 
-## 収録キャラクター(21)
+## 収録キャラクター
 
-Ai.Mi / Asher / Atlas / Drek'ar / Dubu / Era / Estelle / Finii / Juliette / Juno / Kai / Kazan / Luna / Mako / Nao / Octavia / Rasmus / Rune / Vyce / X / Zentaro
-
-全キャラの ID・英語名・日本語名・image path は [`manifest.json`](./manifest.json) を参照。
+21 characters。ID・英語名・日本語名・image path の SOT は [`manifest.json`](./manifest.json)。README で個別列挙はしない(drift 防止)。
 
 ## リポジトリ構成
 
